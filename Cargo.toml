@@ -1,0 +1,11 @@
+[package]
+name = "knifebot"
+description = "A discord bot with entirely too many knives"
+license = "MPL-2.0"
+version = "0.1.0"
+authors = ["Slavfox <slavfoxman@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+serenity = {version="0.9.2", features=["framework", "standard_framework"]}
+tokio = {version = "0.2", features=["macros"]}
