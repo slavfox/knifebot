@@ -1,0 +1,32 @@
+[tool.poetry]
+name = "knifebot"
+version = "0.0.1"
+description = "A Discord bot with entirely too many knives."
+authors = ["Slavfox <slavfoxman@gmail.com>"]
+license = "MPL-2.0"
+readme = "README.md"
+repository = 'https://github.com/slavfox/knifebot'
+
+[tool.poetry.dependencies]
+python = "^3.7"
+tortoise-orm = "^0.16.19"
+"discord.py" = "^1.5.1"
+
+[tool.poetry.dev-dependencies]
+isort = {version = "^4.3.21", extras = ["pyproject"]}
+black = {version = "^20.8b1", markers = "platform_python_implementation == 'cpython'"}
+[tool.black]
+line-length = 79
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 79
+known_third_party = ["snecs"]
+force_to_top = ["typing"]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
